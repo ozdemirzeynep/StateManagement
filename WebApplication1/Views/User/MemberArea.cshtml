@@ -1,0 +1,25 @@
+﻿@model string;
+@{
+    Layout = null;
+}
+@{
+    if (!string.IsNullOrEmpty(Model))
+    {
+        <p>welcome to new world <strong>@Model</strong></p>
+        <br />
+
+        <a href="@Url.Action("Logout", "User")"> Logoff </a>
+    }
+    else
+    {
+        <p>What is your problem man Your not logged in..</p>
+        //<strong><a href="@Url.Action("Login","User")">Go to login page</a></strong>
+
+        <strong>@Html.ActionLink("Go to login page", "Login", "User")</strong>
+    }
+}
+
+
+
+
+

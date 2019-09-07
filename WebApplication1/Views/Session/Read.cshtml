@@ -1,0 +1,17 @@
+﻿@model Tuple<string, int?>
+@{
+    Layout = null;
+}
+
+<strong>username from session:</strong>@Model.Item1
+<br />
+<form method="get">
+    <input type="hidden" name="UserIdName" value="@Model.Item2" />
+    <br />
+    <input type="submit" value="Gönder" />
+</form>
+
+
+
+
+
